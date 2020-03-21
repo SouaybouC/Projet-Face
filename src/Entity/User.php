@@ -5,11 +5,17 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ *  @UniqueEntity(
+ *     fields={"email"},
+ *     message="Adresse email déjà utilisée"
+ * )
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -30,6 +36,9 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
      */
     private $email;
 
@@ -40,8 +49,14 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage="Votre mot de passe est trop court")
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Mot de passe different")
+     */
+    public $confirm_password;
 
     /**
      * @ORM\Column(type="string", length=3)
@@ -57,11 +72,6 @@ class User
      * @ORM\OneToMany(targetEntity="App\Entity\Comments", mappedBy="UserRelation")
      */
     private $CommentsRelation;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\SkinType", inversedBy="UserRelation")
-     */
-    private $SkinTypeRelation;
 
     public function __construct()
     {
@@ -208,15 +218,27 @@ class User
         return $this;
     }
 
-    public function getSkinTypeRelation(): ?SkinType
+    /**
+     * @inheritDoc
+     */
+    public function getRoles()
     {
-        return $this->SkinTypeRelation;
+        return array('ROLE_USER');
     }
 
-    public function setSkinTypeRelation(?SkinType $SkinTypeRelation): self
+    /**
+     * @inheritDoc
+     */
+    public function getSalt()
     {
-        $this->SkinTypeRelation = $SkinTypeRelation;
+        // TODO: Implement getSalt() method.
+    }
 
-        return $this;
+    /**
+     * @inheritDoc
+     */
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }
