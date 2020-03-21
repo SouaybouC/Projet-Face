@@ -58,6 +58,11 @@ class User
      */
     private $CommentsRelation;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\SkinType", inversedBy="UserRelation")
+     */
+    private $SkinTypeRelation;
+
     public function __construct()
     {
         $this->ImperfectionDetected = new ArrayCollection();
@@ -199,6 +204,18 @@ class User
                 $commentsRelation->setUserRelation(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSkinTypeRelation(): ?SkinType
+    {
+        return $this->SkinTypeRelation;
+    }
+
+    public function setSkinTypeRelation(?SkinType $SkinTypeRelation): self
+    {
+        $this->SkinTypeRelation = $SkinTypeRelation;
 
         return $this;
     }

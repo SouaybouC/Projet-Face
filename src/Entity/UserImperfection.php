@@ -31,6 +31,11 @@ class UserImperfection
      */
     private $UserRelation;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\ImperfectionType")
+     */
+    private $CategoryImperfection;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class UserImperfection
     public function setUserRelation(?User $UserRelation): self
     {
         $this->UserRelation = $UserRelation;
+
+        return $this;
+    }
+
+    public function getCategoryImperfection(): ?ImperfectionType
+    {
+        return $this->CategoryImperfection;
+    }
+
+    public function setCategoryImperfection(?ImperfectionType $CategoryImperfection): self
+    {
+        $this->CategoryImperfection = $CategoryImperfection;
 
         return $this;
     }
