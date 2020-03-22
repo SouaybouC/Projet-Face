@@ -4,12 +4,18 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ *  @UniqueEntity(
+ *     fields={"email"},
+ *     message="Adresse email déjà utilisée"
+ * )
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -30,6 +36,9 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email."
+     * )
      */
     private $email;
 
@@ -40,8 +49,14 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage="Votre mot de passe est trop court")
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Mot de passe different")
+     */
+    public $confirm_password;
 
     /**
      * @ORM\Column(type="string", length=3)
@@ -208,6 +223,7 @@ class User
         return $this;
     }
 
+
     public function getSkinTypeRelation(): ?SkinType
     {
         return $this->SkinTypeRelation;
@@ -218,5 +234,30 @@ class User
         $this->SkinTypeRelation = $SkinTypeRelation;
 
         return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+
     }
 }

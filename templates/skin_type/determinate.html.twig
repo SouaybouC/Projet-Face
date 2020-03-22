@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if app.user %}
+    <h2> Determiner votre type de peau grace à quelques questions : </h2>
+<br>
+<form action="" method="post">
+    <div > Vous qualiferiez votre teint de : <br>
+        <input type="checkbox" name="Teint" value="Clair/Lumineux" > Clair et lumineux
+        <input type="checkbox" name="Teint" value="Terne/Luisant"> Terne et luisant
+        <input type="checkbox" name="Teint" value="Terne/Clair"> Clair et terne
+        <input type="checkbox" name="Teint" value="Terne/Luisant zone T"> Luisant sur le front, nez et menton
+    </div>
+<br>
+    <div > Avez vous des brillances ?  <br>
+        <input type="checkbox" name="Brillances" value="Non" > Non aucunes
+        <input type="checkbox" name="Brillances" value="Oui"> Oui un peu partout sur le visage
+        <input type="checkbox" name="Brillances" value="Non"> Très rarement sur la zone T
+        <input type="checkbox" name="Brillances" value="Zone T"> Oui sur la zone T uniquement
+    </div>
+    <br><br>
+    <div> Vos pores sont-ils apparent ? <br>
+        <input type="checkbox" name="Pores" value="Non" > Non je ne vois aucun pores
+        <input type="checkbox" name="Pores" value="Oui"> Oui mes pores sont dilatés sur ma zone T et mes joues
+        <input type="checkbox" name="Pores" value="Non"> Je n'en ai qu'en periode de grandes chaleur
+        <input type="checkbox" name="Pores" value="zone T"> Oui sur le front ou le nez ou le menton
+    </div>
+    <br><br>
+    <div > Votre peau est-elle particulierement sensible ? <br>
+        <input type="checkbox" name="Sensibility" value="Non" > Non pas specialement
+        <input type="checkbox" name="Sensibility" value="Importante"> Oui très sensible au toucher et au changement de saison
+        <input type="checkbox" name="Sensibility" value="Variable"> Sensible en hiver uniquement
+    </div>
+    <br><br>
+    <div > Avez-vous des points noirs ?  <br>
+        <input type="checkbox" name="DarkHead" value="Non" > Non
+        <input type="checkbox" name="DarkHead" value="Oui"> Oui
+        <input type="checkbox" name="DarkHead" value="zone T"> Oui sur la zone T uniquement
+    </div>
+    <br>
+
+    <button type="submit">Envoyer</button>
+
+
+</form>
+    {% else %}
+    <h2>Veuillez vous connecter </h2>
+
+    {% endif %}
+
+{% endblock %}
