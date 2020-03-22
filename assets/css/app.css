@@ -1,0 +1,375 @@
+
+.body{
+    margin-top:11vw;
+    padding:15px 15px 200px;
+}
+
+.footer{
+    padding:15px 15px;
+
+}
+
+#footernav{
+    overflow: hidden;
+    padding: 50px 0px;
+    width: 100%;
+
+}
+.footernavtop{
+    text-align: center;
+    float: left;
+    display: block;
+    padding-left:33%;
+}
+
+
+
+
+
+
+.Avis{
+    padding: 100px 10px;
+    height: 300px;
+    min-height: 200px;
+    position: relative;
+}
+
+.Avis-content{
+
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    min-height: 500px;
+    font-size: 10px;
+    padding: 5px;
+}
+.tem{
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+
+.Avis-content::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.Avis-content .tem img{
+    width: 70%;
+    height:auto;
+}
+
+
+.DemandeRens{
+    height: 400px;
+    min-height: 300px;
+    background-color: #1ea471;
+    /* background-image: url('paralax1.jpg'); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 100px;
+}
+
+
+.Accueil{
+    height:600px;
+    min-height: 400px;
+    background-color: #5eb5e0;
+    /* background-image: url('paralax.png'); */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 100px;
+}
+
+.Accueil-content,.DemandeRens-content{
+    padding: 5px 5px 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    word-wrap: break-word;
+}
+
+.Avis h2{
+    color: black;
+}
+
+.acc-ins:hover{
+    opacity: 0.5;
+    color: white;
+}
+
+
+.acc-ins{
+    text-decoration: none;
+    margin-top: 100px;
+    border: solid;
+
+}
+
+h1,h2,h3,.acc-ins{
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    display: block;
+}
+
+.mail,.quest,.envoyer{
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-size: 12px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+.envoyer {
+    display: inline-block;
+    background-color:transparent;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.envoyer:hover{
+    opacity: 0.5;
+}
+
+
+.contact-form{
+    padding: 5px;
+    text-align: center;
+}
+
+.questarea,.mailarea{
+    width: 90%;
+    resize: none;
+    height: 100%;
+}
+
+
+
+h1{
+    font-size: 90px;
+}
+h2{
+    font-size: 34px;
+}
+h3{
+    font-size: 14px;
+}
+
+
+
+
+
+
+#headernav{
+    overflow: hidden;
+    background-color: white;
+    padding: 50px 0px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    height: 10%;
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+}
+
+#headernav a,#footernav a {
+    text-align: center;
+    white-space: normal;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: futura-pt;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+}
+
+.headernavright{
+    float: right;
+}
+
+.headernavcenter {
+    text-align: center;
+    padding-left: 30%;
+
+}
+
+/* Style the logo */
+#headernav,.headernav a {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#headernav a:hover,#footernav a:hover{
+    color: #ddd;
+}
+
+#headernav a.active{
+    background-color: #76787b;
+    width: 50%;
+    color: black;
+}
+
+#headernav .icon{
+    display: none;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 700px) {
+    .headernav {
+        padding: 30px 5px !important;
+        transition: 0.4s;
+        position: fixed;
+        width: 100%;
+        top: 0; /* At the top */
+        z-index: 99;
+    }
+
+    #headernav a.active{
+        width: 30%;
+    }
+    #headernav a:not(:first-child){
+        display: none;
+    }
+    #headernav a {
+        float: left;
+        display: block;
+        text-align: left;
+    }
+    #headernav a.icon{
+        float: right;
+        display: block;
+    }
+    .headernavleft,.headernavright {
+        float: none;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .headernav.responsive,.headernavright.responsive{
+        position: relative;
+    }
+    .headernav.responsive a,.headernavright.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    h3{
+        font-size: 10px;
+    }
+
+
+    .footernavtop{
+        padding-left:15%;
+    }
+    .headernavcenter{
+        padding-left: 40%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Inscription,.Connexion{
+
+    text-align: center;
+    padding:50px;
+}
+
+.Inscription-content,.Connexion-content{
+    background-color: #5d5f61;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+
+}
+
+
+.envoyerins {
+    display: inline-block;
+    background-color:transparent;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.envoyerins:hover{
+    opacity: 0.5;
+}
+
+.envoyerins,.id,.mdp{
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-size: 12px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.id{
+    display: block;
+    resize: none;
+
+}
+
+.area,.form-control{
+    text-align: center;
+    width: 60%;
+    margin-left:20% ;
+    resize: none;
+    height: 100%;
+    display: block;
+}
+
