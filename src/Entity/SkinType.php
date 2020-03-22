@@ -179,4 +179,6 @@ class SkinType
 
         return $this;
     }
+
+
 }
