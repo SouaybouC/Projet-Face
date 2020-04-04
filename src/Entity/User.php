@@ -73,6 +73,12 @@ class User implements UserInterface
      */
     private $CommentsRelation;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\SkinType", inversedBy="UserRelation")
+     */
+    private $SkinTypeRelation;
+
+
     public function __construct()
     {
         $this->ImperfectionDetected = new ArrayCollection();
@@ -218,6 +224,18 @@ class User implements UserInterface
         return $this;
     }
 
+    public function getSkinTypeRelation(): ?SkinType
+    {
+        return $this->SkinTypeRelation;
+    }
+
+    public function setSkinTypeRelation(?SkinType $SkinTypeRelation): self
+    {
+        $this->SkinTypeRelation = $SkinTypeRelation;
+
+        return $this;
+    }
+
     /**
      * @inheritDoc
      */
@@ -241,4 +259,9 @@ class User implements UserInterface
     {
         // TODO: Implement eraseCredentials() method.
     }
+
+  public function __toString()
+  {
+     return $this->username;
+  }
 }

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+ {% block title %}SkinType index{% endblock %}
+
+ {% block body %}
+     <h1>SkinType index</h1>
+
+     <table class="table">
+         <thead>
+         <tr>
+             <th>Id</th>
+             <th>Label</th>
+             <th>Tone</th>
+             <th>Brightness</th>
+             <th>Pores</th>
+             <th>Sensibility</th>
+             <th>Blackhead</th>
+             <th>Description</th>
+             <th>actions</th>
+         </tr>
+         </thead>
+         <tbody>
+         {% for skin_type in skin_types %}
+             <tr>
+                 <td>{{ skin_type.id }}</td>
+                 <td>{{ skin_type.Label }}</td>
+                 <td>{{ skin_type.Tone }}</td>
+                 <td>{{ skin_type.Brightness }}</td>
+                 <td>{{ skin_type.Pores }}</td>
+                 <td>{{ skin_type.Sensibility }}</td>
+                 <td>{{ skin_type.Blackhead }}</td>
+                 <td>{{ skin_type.Description }}</td>
+                 <td>
+                     <a href="{{ path('skin_type_show', {'id': skin_type.id}) }}">show</a>
+                 </td>
+             </tr>
+         {% else %}
+             <tr>
+                 <td colspan="9">no records found</td>
+             </tr>
+         {% endfor %}
+         </tbody>
+     </table>
+
+ {% endblock %}

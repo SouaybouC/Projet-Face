@@ -58,9 +58,15 @@ class SkinType
      */
     private $ProductRelation;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="SkinTypeRelation")
+     */
+    private $UserRelation;
+
     public function __construct()
     {
         $this->ProductRelation = new ArrayCollection();
+        $this->UserRelation = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -180,5 +186,36 @@ class SkinType
         return $this;
     }
 
+    /**
+     * @return Collection|User[]
+     */
+    public function getUserRelation(): Collection
+    {
+        return $this->UserRelation;
+    }
+
+    public function addUserRelation(User $userRelation): self
+    {
+        if (!$this->UserRelation->contains($userRelation)) {
+            $this->UserRelation[] = $userRelation;
+            $userRelation->setSkinTypeRelation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserRelation(User $userRelation): self
+    {
+        if ($this->UserRelation->contains($userRelation)) {
+            $this->UserRelation->removeElement($userRelation);
+            // set the owning side to null (unless already changed)
+            if ($userRelation->getSkinTypeRelation() === $this) {
+                $userRelation->setSkinTypeRelation(null);
+            }
+        }
+
+        return $this;
+    }
 
 }
+
