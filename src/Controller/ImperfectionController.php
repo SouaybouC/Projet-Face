@@ -14,11 +14,10 @@ class ImperfectionController extends AbstractController
     /**
      * @Route("/", name="imperfection_index")
      */
-    public function index(ImperfectionTypeRepository $imperfectionTypeRepository)
+    public function index()
     {
-        return $this->render('imperfection/index.html.twig', [
-            'imperfections' => $imperfectionTypeRepository->findAll(),
-        ]);
+        return $this->render('imperfection/index.html.twig'
+           );
     }
 
 

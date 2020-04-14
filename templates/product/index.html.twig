@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+ {% block title %}{{ produit.Name }}{% endblock %}
+
+ {% block body %}
+
+     <div class="body">
+
+     <h1>{{ produit.Name }}</h1>
+     <p> {{ produit.description }}</p>
+
+     <h2> Commentaires </h2>
+
+
+     {% for comments in produit.CommentsRelation %}
+         <p> Titre : {{ comments.title }} </p>
+         <p> {{ comments.contains }} </p>
+         <a href="{{ path('comment_edit', {id : comments.id}) }}"> Modifier </a>
+         <a href="{{ path('delete',{id : comments.id}) }}">Supprimer<a>
+         <br>
+         <br>
+     {% else %}
+         <p>Aucun commentaire soyez le premier a en rédigez un</p>
+     {% endfor %}
+
+
+     <h2> Ajout d'un commentaire</h2>
+
+     <p>Dites nous ce que vous avez pensé de ce produit</p>
+
+     {{ form_start(form) }}
+     {{ form_widget(form) }}
+     <button type="submit">Valider</button>
+     {{ form_end(form) }}
+     </div>
+ {% endblock %}

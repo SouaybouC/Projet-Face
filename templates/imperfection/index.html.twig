@@ -2,31 +2,39 @@
 
 {% block title %}Imperfection index{% endblock %}
 
- {% block body %}
-     <h1>Imperfection index</h1>
 
-     <table class="table">
-         <thead>
-         <tr>
-             <th>Label</th>
-             <th>       </th>
-             <th>Description</th>
-         </tr>
-         </thead>
-         <tbody>
-         {% for imperfection in imperfections %}
-             <tr>
-                 <td>{{ imperfection.Label }}</td>
-                 <td>
-                 </td>
-                 <td>{{ imperfection.Description }}</td>
-             </tr>
-         {% else %}
-             <tr>
-                 <td colspan="9">no records found</td>
-             </tr>
-         {% endfor %}
-         </tbody>
-     </table>
+{% block body %}
+<div class="face">
+    <H1 style = "font-size:45px; text-align: center; margin-top: 5%;"> Signalez votre imperfection </H1>
 
- {% endblock %}
+    <p>Merci de bien vouloir selectionner la zone concerné</p>
+
+    <img id ="front" name="front" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_4.png') }}"> <br>
+    <img id ="yeux" name="yeux" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_5.png') }}"> <br>
+    <img id ="jouegauche" name="joue" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_6.png') }}">
+    <img id ="nez" name="nez" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_7.png') }}">
+    <img id ="jouedroite" name="joue" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_8.png') }}"> <br>
+    <img id ="bouche" name="bouche" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_9.png') }}"> <br>
+    <img id ="menton" name="menton" onclick = "changeImage(id);this.name=name" src="{{ asset('images/facefinal_10.png') }}"> <br>
+
+    {#<a href="{{ path('questionnaire',{name : visage.name}) }}"> Suivant </a>#}
+
+    <script>
+
+        function changeImage(id) {
+
+            var image = document.getElementById(id);
+            var sPath = document.getElementById(id).src; //
+            var s = sPath.substring(sPath.lastIndexOf("/"));
+
+
+            if (image.src.match("imagesrouge")) {
+                image.src = "{{ asset('images')}}"+s;
+            }else{
+                image.src = "{{ asset('imagesrouge') }}"+s;
+            }
+        }
+
+    </script>
+
+    {% endblock body %}
