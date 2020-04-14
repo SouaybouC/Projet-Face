@@ -1,52 +1,66 @@
 {% extends 'base.html.twig' %}
 
- {% block body %}
-
-     {% if app.user %}
-         <h2> Determiner votre type de peau grace à quelques questions : </h2>
-         <br>
-         <form action="" method="post">
-             <div > Vous qualiferiez votre teint de : <br>
-                 <input type="checkbox" name="Teint" value="Clair/Lumineux" > Clair et lumineux
-                 <input type="checkbox" name="Teint" value="Terne/Luisant"> Terne et luisant
-                 <input type="checkbox" name="Teint" value="Terne/Clair"> Clair et terne
-                 <input type="checkbox" name="Teint" value="Terne/Luisant zone T"> Luisant sur le front, nez et menton
-             </div>
-             <br>
-             <div > Avez vous des brillances ?  <br>
-                 <input type="checkbox" name="Brillances" value="Non" > Non aucunes
-                 <input type="checkbox" name="Brillances" value="Oui"> Oui un peu partout sur le visage
-                 <input type="checkbox" name="Brillances" value="Non"> Très rarement sur la zone T
-                 <input type="checkbox" name="Brillances" value="Zone T"> Oui sur la zone T uniquement
-             </div>
-             <br><br>
-             <div> Vos pores sont-ils apparent ? <br>
-                 <input type="checkbox" name="Pores" value="Non" > Non je ne vois aucun pores
-                 <input type="checkbox" name="Pores" value="Oui"> Oui mes pores sont dilatés sur ma zone T et mes joues
-                 <input type="checkbox" name="Pores" value="Non"> Je n'en ai qu'en periode de grandes chaleur
-                 <input type="checkbox" name="Pores" value="zone T"> Oui sur le front ou le nez ou le menton
-             </div>
-             <br><br>
-             <div > Votre peau est-elle particulierement sensible ? <br>
-                 <input type="checkbox" name="Sensibility" value="Non" > Non pas specialement
-                 <input type="checkbox" name="Sensibility" value="Importante"> Oui très sensible au toucher et au changement de saison
-                 <input type="checkbox" name="Sensibility" value="Variable"> Sensible en hiver uniquement
-             </div>
-             <br><br>
-             <div > Avez-vous des points noirs ?  <br>
-                 <input type="checkbox" name="DarkHead" value="Non" > Non
-                 <input type="checkbox" name="DarkHead" value="Oui"> Oui
-                 <input type="checkbox" name="DarkHead" value="zone T"> Oui sur la zone T uniquement
-             </div>
-             <br>
-
-             <button type="submit">Envoyer</button>
+{% block title %}
+    DeterminerPeau!
+{% endblock %}
 
 
-         </form>
-     {% else %}
-         <h2>Veuillez vous connecter </h2>
+{% block body %}
 
-     {% endif %}
+<div class="body">
+    <div class="Determinate">
+        <div class="Determinate-content">
+            <h2> Determiner votre type de peau grace à quelques questions : </h2>
+            <br>
+            <form action="" method="post">
+                <div class="testdet"><p>Vous qualiferiez votre teint de :</p> <br>
+                    <label> <input type="checkbox" name="Teint" value="Clair/Lumineux"> Clair et lumineux </label>
+                    <label><input type="checkbox" name="Teint" value="Terne/Luisant">Terne et luisant </label>
+                    <label><input type="checkbox" name="Teint" value="Terne/Clair"> Clair et terne </label>
+                    <label><input type="checkbox" name="Teint" value="Terne/Luisant zone T"> Luisant sur le front, nez
+                        et menton</label>
+                </div>
+                <br>
+                <div class="testdet"><p> Avez vous des brillances ? </p>
+                    <label><input type="checkbox" name="Brillances" value="Non"> Non aucunes</label>
+                    <label><input type="checkbox" name="Brillances" value="Oui"> Oui un peu partout sur le
+                        visage</label>
+                    <label><input type="checkbox" name="Brillances" value="Non">Très rarement sur la zone T</label>
+                    <label><input type="checkbox" name="Brillances" value="Zone T"> Oui sur la zone T uniquement</label>
+                </div>
+                <br><br>
+                <div class="testdet"><p> Vos pores sont-ils apparent ? </p>
+                    <label><input type="checkbox" name="Pores" value="Non"> Non je ne vois aucun pores</label>
+                    <label><input type="checkbox" name="Pores" value="Oui"> Oui mes pores sont dilatés sur ma zone T et
+                        mes joues</label>
+                    <label><input type="checkbox" name="Pores" value="Non"> Je n'en ai qu'en periode de grandes chaleur</label>
+                    <label><input type="checkbox" name="Pores" value="zone T"> Oui sur le front ou le nez ou le
+                        menton</label>
+                </div>
+                <br><br>
+                <div class="testdet"><p>Votre peau est-elle particulierement sensible ? </p>
+                    <label><input type="checkbox" name="Sensibility" value="Non"> Non pas specialement</label>
+                    <label><input type="checkbox" name="Sensibility" value="Importante"> Oui très sensible au toucher et
+                        au changement de saison</label>
+                    <label><input type="checkbox" name="Sensibility" value="Variable"> Sensible en hiver
+                        uniquement</label>
+                </div>
+                <br><br>
+                <div class="testdet"><p> Avez-vous des points noirs ? </p>
+                    <label><input type="checkbox" name="DarkHead" value="Non"> Non</label>
+                    <label><input type="checkbox" name="DarkHead" value="Oui"> Oui</label>
+                    <label><input type="checkbox" name="DarkHead" value="zone T"> Oui sur la zone T uniquement</label>
+                </div>
+                <br>
 
- {% endblock %}
+                <button class="envoyerdet" type="submit">Envoyer</button>
+
+
+            </form>
+        </div>
+
+        <div>
+        </div>
+
+
+        {% endblock %}

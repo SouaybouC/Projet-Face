@@ -24,6 +24,9 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/js/app.js')
+    .addStyleEntry('css/app','./assets/css/app.css')
+    .addStyleEntry('css/ins','./assets/css/ins.css')
+    .addStyleEntry('css/determinate','./assets/css/determinate.css')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

@@ -1,20 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+ {% block title %}Hello HomeController!{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+ {% block body %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/souaybou/workspace/PHP/prjetFace/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/souaybou/workspace/PHP/prjetFace/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+     <section class="body">
+
+         <div class="Accueil">
+
+             <div class="Accueil-content">
+                 <h3>Bienvenue</h3>
+                 <h1>FACE BIO CARE</h1>
+                 <h2>Soins</h2>
+                 <h2>Diagnostic</h2>
+                 <h2>Cosmetique</h2>
+                 <span>
+ 					<a href="{{ path('security_inscription') }}" class="acc-ins">
+ 						 Inscrivez-vous
+ 					</a>
+ 				</span>
+
+             </div>
+         </div>
+         <div class="Avis">
+             <h2>Les avis de nos fideles</h2>
+             <div class="Avis-content">
+                 <div class="tem">
+                     <p>ici il faut rajouter les avis par rapport a la bdd</p></div>
+                 <div class="tem">
+                     <p>ici il faut rajouter les avis par rapport a la bdd</p></div>
+                 <div class="tem">
+                     <p>ici il faut rajouter les avis par rapport a la bdd</p></div>
+             </div>
+
+         </div>
+     </section>
+
+ {% endblock %}

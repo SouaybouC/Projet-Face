@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imperfection index{% endblock %}
+
+ {% block body %}
+     <h1>Imperfection index</h1>
+
+     <table class="table">
+         <thead>
+         <tr>
+             <th>Label</th>
+             <th>       </th>
+             <th>Description</th>
+         </tr>
+         </thead>
+         <tbody>
+         {% for imperfection in imperfections %}
+             <tr>
+                 <td>{{ imperfection.Label }}</td>
+                 <td>
+                 </td>
+                 <td>{{ imperfection.Description }}</td>
+             </tr>
+         {% else %}
+             <tr>
+                 <td colspan="9">no records found</td>
+             </tr>
+         {% endfor %}
+         </tbody>
+     </table>
+
+ {% endblock %}

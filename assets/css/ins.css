@@ -1,0 +1,17 @@
+
+
+.Inscription{
+
+    text-align: center;
+    padding:50px;
+}
+
+.Inscription-content{
+    background-color: #ebebeb;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+
+}

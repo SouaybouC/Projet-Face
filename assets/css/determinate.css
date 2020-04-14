@@ -1,0 +1,88 @@
+
+.body{
+    margin-top:11vw;
+    padding:15px 15px;
+}
+
+
+
+.Determinate-content label{
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: .1em;
+    line-height: 1em;
+
+
+}
+
+.Determinate-content{
+    padding: 5px 5px 10px;
+    display: block;
+    word-wrap: break-word;
+    height: 100%;
+    width: 100%;
+}
+
+
+.Determinate{
+    text-align: center;
+    height: 800px;
+    min-height: 400px;
+    background-color: skyblue;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 100px;
+}
+
+
+
+.testdet p{
+    white-space: normal;
+    color: black;
+    font-family: futura-pt;
+    font-size: 12px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.envoyerdet{
+    text-align: center;
+    white-space: normal;
+    color: black;
+    font-family: futura-pt;
+    font-size: 12px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    background-color:transparent;
+    border: solid;
+    border-color: black;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.envoyerdet:hover{
+    opacity: 0.5;
+}
+
+
+.Determinate-content h2{
+    text-align: center;
+    white-space: normal;
+    color: black;
+    font-family: futura-pt;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    display: block;
+}
