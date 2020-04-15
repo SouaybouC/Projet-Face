@@ -1,15 +1,27 @@
 {% extends 'base.html.twig' %}
  {% form_theme form 'bootstrap_4_layout.html.twig' %}
  {% block title %}{{comments.title}}{% endblock %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('css/app') }}
+    {{ encore_entry_link_tags('css/produit') }}
+{% endblock %}
+
 
  {% block body %}
-
+     <div class="body">
+     <div class="Produit">
+        <div class="Produit-content">
+            <h3>{{ produit.Name }}</h3>
      <h2> Modification </h2>
 
-     {{ form_start(form) }}
-     {{ form_widget(form) }}
-     <button type="submit" >Valider</button>
+            <div class="id">
+     {{ form_start(form,{'attr':{'class':'area'}}) }}
+     {{ form_widget(form,{'attr':{'class':'area'}}) }}
+                <br>
+     <button class="envoyercom" type="submit" >Valider</button>
      {{ form_end(form)  }}
-
-
+            </div>
+        </div>
+     </div>
+     </div>
  {% endblock %}

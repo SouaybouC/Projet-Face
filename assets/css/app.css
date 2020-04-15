@@ -29,7 +29,7 @@
 h1,h2,h3 {
     text-align: center;
     white-space: normal;
-    color: black;
+    color: white;
     font-family: futura-pt;
     font-weight: 500;
     font-style: normal;
@@ -63,7 +63,7 @@ h3{
     z-index: 99;
 }
 
-#headernav a,#footernav a {
+#headernav a,#footernav a{
     text-align: center;
     white-space: normal;
     float: left;
@@ -78,8 +78,22 @@ h3{
     letter-spacing: .22em;
     line-height: 1.5em;
 }
+.footernavtop a{
+    text-align: center;
+    display: inline-block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: futura-pt;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+}
 
-.headernavright{
+
+ .headernavright{
     float: right;
 }
 
@@ -98,13 +112,13 @@ h3{
 
 /* Links on mouse-over */
 #headernav a:hover,#footernav a:hover{
-    color: #ddd;
+    color: #6c757d;
 }
 
 #headernav a.active{
-    background-color: #76787b;
+    background-color: #adb7e7;
     width: 50%;
-    color: black;
+    color: white;
 }
 
 
@@ -205,7 +219,7 @@ h3{
 }
 
 .Inscription-content,.Connexion-content{
-    background-color: #5d5f61;
+    background-color: #adb7e7;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

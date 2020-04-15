@@ -3,7 +3,7 @@
  {% block title %}Accueil{% endblock %}
     {% block stylesheets %}
         {{ encore_entry_link_tags('css/accueil') }}
-        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('css/app') }}
     {% endblock %}
 
  {% block body %}
@@ -19,9 +19,16 @@
                  <h2>Diagnostic</h2>
                  <h2>Cosmetique</h2>
                  <span>
- 					<a href="{{ path('security_inscription') }}" class="acc-ins">
- 						 Inscrivez-vous
+                     {% if app.user %}
+                     <a href="{{ path('skin_type_user') }}" class="acc-ins">
+ 						 Determinez votre type de peau!
  					</a>
+
+                     {% else %}
+ 					<a href="{{ path('security_inscription') }}" class="acc-ins">
+ 						 Inscrivez vous!
+ 					</a>
+                     {% endif %}
  				</span>
 
              </div>

@@ -6,7 +6,7 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
 
     {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('css/app') }}
     {% endblock %}
 </head>
 <body>
@@ -20,13 +20,13 @@
             <div class="headernavleft">
                 <a href="{{ path('home') }}">Accueil</a>
                 <a href="{{ path('imperfection_index') }}">Mon imperfection</a>
-                <a href="{{ path('home') }}">Ma peau</a>
+                <a href="{{ path('skin_type_user') }}">Ma peau</a>
             </div>
             <div class="headernavcenter">
                 <a href="{{ path('home') }}" class="active"> FACE BIO CARE</a>
             </div>
             <div class="headernavright">
-                <a href="{{ path('product') }}">Mon produit(test)</a>
+                <a href="{{ path('product') }}">Mon historique</a>
                 <a href="{{ path('security_logout') }}">Déconnexion</a>
             </div>
         </div>
@@ -60,9 +60,9 @@
 <section class="footer">
     <div id="footernav">
         <div class="footernavtop">
-            <a href="{{ path('home') }}">A propos</a>
-            <a href="{{ path('home') }}">Nous contacter</a>
-            <a href="{{ path('home') }}">Condition et politique</a>
+            <a href="{{ path('home') }}">projetface@gmail.com</a>
+            <a href="{{ path('home') }}">Condition d'utilisation</a>
+
         </div>
     </div>
 </section>

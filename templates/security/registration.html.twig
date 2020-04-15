@@ -3,7 +3,7 @@
     Inscription !
 {% endblock %}
     {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('css/app') }}
         {{ encore_entry_link_tags('css/ins') }}
     {% endblock %}
 
@@ -22,14 +22,15 @@
                      {{ form_start(form) }}
 
                      <span class="id">
-                     {{ form_row(form.email,{'label':'Adresse email','attr':{'placeholder':'pedro1234@projectface.com','class':'area'}}) }}
-                         {{ form_row(form.username,{'label':'Nom d\'utilisateur ', 'attr':{'placeholder':'exemple: pedro1234','class':'area'}}) }}
-                         {{ form_row(form.firstname, {'label':'Prénom','attr':{'placeholder':'firstname','class':'area'}}) }}
-                         {{ form_row(form.name, {'label':'Nom de famille ','attr':{'placeholder':'Lastname','class':'area'}}) }}
-                         {{ form_row(form.sex, {'label':'Sexe','attr':{'placeholder':'Genre: M/F/N','class':'area'}}) }}
-                         {{ form_row(form.password,{'attr':{'class':'area'}}) }}
-                         {{ form_row(form.confirm_password,{'attr':{'class':'area'}}) }}
+                     {{ form_row(form.email,{'label':'Adresse email','attr':{'placeholder':'pedro1234@projectface.com','class':'area'}}) }}<br>
+                         {{ form_row(form.username,{'label':'Nom d\'utilisateur ', 'attr':{'placeholder':'exemple: pedro1234','class':'area'}}) }}<br>
+                         {{ form_row(form.firstname, {'label':'Prénom','attr':{'placeholder':'firstname','class':'area'}}) }}<br>
+                         {{ form_row(form.name, {'label':'Nom de famille ','attr':{'placeholder':'Lastname','class':'area'}}) }}<br>
+                         {{ form_row(form.sex, {'label':'Sexe','attr':{'placeholder':'Genre: M/F/N','class':'area'}}) }}<br>
+                         {{ form_row(form.password,{'attr':{'class':'area'}}) }}<br>
+                         {{ form_row(form.confirm_password,{'attr':{'class':'area'}}) }}<br>
                  </span>
+                     <br>
                      <button class="envoyerins" type="submit">Valider!</button>
                      {{ form_end(form) }}
 
