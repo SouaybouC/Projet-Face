@@ -30,6 +30,7 @@ Encore
     .addStyleEntry('css/accueil','./assets/css/accueil.css')
     .addStyleEntry('css/determinate','./assets/css/determinate.css')
     .addStyleEntry('css/imperfection','./assets/css/imperfection.css')
+    .addStyleEntry('css/produit','./assets/css/produit.css')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

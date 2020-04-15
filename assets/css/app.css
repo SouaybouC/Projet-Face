@@ -29,7 +29,7 @@
 h1,h2,h3 {
     text-align: center;
     white-space: normal;
-    color: white;
+    color: black;
     font-family: futura-pt;
     font-weight: 500;
     font-style: normal;
@@ -39,38 +39,6 @@ h1,h2,h3 {
     text-rendering: optimizeLegibility;
     display: block;
 }
-
-
-
-
-
-
-
-
-
-
-.envoyer {
-    display: inline-block;
-    background-color:transparent;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.envoyer:hover{
-    opacity: 0.5;
-}
-
-
-.contact-form{
-    padding: 5px;
-    text-align: center;
-}
-
-
-
-
-
 h1{
     font-size: 90px;
 }
@@ -80,9 +48,6 @@ h2{
 h3{
     font-size: 14px;
 }
-
-
-
 
 
 
@@ -206,6 +171,24 @@ h3{
 
 
 
+
+.envoyer {
+    display: inline-block;
+    background-color:transparent;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.envoyer:hover{
+    opacity: 0.5;
+}
+
+
+.contact-form{
+    padding: 5px;
+    text-align: center;
+}
 
 
 
