@@ -14,12 +14,12 @@ class ProductController extends AbstractController
 {
 
     /**
-     * @Route("/product", name ="product")
+     * @Route("/product/{id}", name ="product")
      */
-    public function form(Request $request)
+    public function form(Request $request, $id)
     {
 
-        $produit = $this->getDoctrine()->getRepository(Product::class)->findOneByName('Huile de Callophyle');
+        $produit = $this->getDoctrine()->getRepository(Product::class)->find($id);
 
         if (!$produit) {
             // Si aucun article n'est trouvé, nous créons une exception
@@ -35,7 +35,7 @@ class ProductController extends AbstractController
         $form = $this->createForm(CommentsType::class, $comments);
         $form->handleRequest($request);
         //Nous vérifions si le formulaire à été soumis
-        if ($form->isSubmitted()&& $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
             // Hydrate notre commentaire avec l'article
             $comments->setProductRelation($produit);
@@ -48,8 +48,8 @@ class ProductController extends AbstractController
 
         return $this->render('product/index.html.twig', [
             'form' => $form->createView(),
-            'produit'=> $produit,
-            'comments'=>$comments,
+            'produit' => $produit,
+            'comments' => $comments,
 
         ]);
     }
@@ -58,25 +58,26 @@ class ProductController extends AbstractController
      * @Route("/edit/{id}", name ="comment_edit")
      */
 
-    public function edit(Request $request, Comments $comments){
+    public function edit(Request $request, Comments $comments, $id)
+    {
 
-        $product = $this->getDoctrine()->getRepository(Product::class)->findOneByName('Huile de Callophyle');
+        $product = $this->getDoctrine()->getRepository(Product::class)->find($id);
         $form = $this->createForm(CommentsType::class, $comments);
         $form->handleRequest($request);
 
 
         //Nous vérifions si le formulaire à été soumis
-        if ($form->isSubmitted()&& $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $doctrine = $this->getDoctrine()->getManager();
             $doctrine->flush();
-            return $this->redirectToRoute('product', ['name'=>$product->getName()]);
+            return $this->redirectToRoute('product', ['name' => $product->getName()]);
 
         }
 
         return $this->render('product/removecom.html.twig', [
             'form' => $form->createView(),
-            'produit'=> $product,
-            'comments'=>$comments,
+            'produit' => $product,
+            'comments' => $comments,
 
         ]);
 
@@ -86,14 +87,15 @@ class ProductController extends AbstractController
      * @Route("/product/{id}", name ="delete")
      */
 
-    public function delete(Comments $comments){
+    public function delete(Comments $comments, $id)
+    {
 
-        $product = $this->getDoctrine()->getRepository(Product::class)->findOneByName('Huile de Callophyle');
-        $doctrine= $this->getDoctrine()->getManager();
+        $product = $this->getDoctrine()->getRepository(Product::class)->find($id);
+        $doctrine = $this->getDoctrine()->getManager();
         $doctrine->remove($comments);
         $doctrine->flush();
 
-        return $this->redirectToRoute('product', ['name'=>$product->getName()]);
+        return $this->redirectToRoute('product', ['name' => $product->getName()]);
     }
 
 

@@ -1,0 +1,24 @@
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="body">
+
+            Bienvenu {{ app.user.username }}
+
+        {% for imp in imperfection %}
+
+            <h1>{{ imp.Label }}</h1>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+
+

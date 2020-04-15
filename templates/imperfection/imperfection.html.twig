@@ -1,31 +1,17 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Mon Imperfection{% endblock %}
 
 {% block body %}
-    <h2> Détails de votre Imperfection : </h2>
-    <br>
-    <form action="" method="post">
-        <div>Emplacement :
-            <input type="checkbox" name="place" value="Front"> Front
-            <input type="checkbox" name="place" value="Yeux"> Au niveau des yeux
-            <input type="checkbox" name="place" value="Nez"> Nez
-            <input type="checkbox" name="place" value="Joue"> Joue
-            <input type="checkbox" name="place" value="Bouche"> Autour de la bouche
-            <input type="checkbox" name="place" value="Menton">Menton
-        </div>
-        <br>
-        <div>Type :
-            <input type="checkbox" name="bouton" value="bouton"> bouton
-            <input type="checkbox" name="rougeur" value="Rougeur"> rougeur
-            <input type="checkbox" name="cerne" value="Cerne"> Cerne
-            <input type="checkbox" name="PointNoir" value="PointNoir"> Point noir
-            <input type="checkbox" name="Comedon" value="Comedon"> Comedon
-            <input type="checkbox" name="Squame" value="Squame">Squame (Pelage de la peau)
-            <input type="checkbox" name="Couperose" value="couperose">Couperose (Maladie de la peau)
-        </div>
-        <button type="submit">Envoyer</button>
+    <div class="body">
+        <h2> Détails de votre Imperfection : </h2>
+        {{ form_start(form) }}
+        {{ form_row(form.place) }}
+        {{ form_row(form.CategoryImperfection,{'label':'Type de l\'imperfection'}) }}
+        <button class="envoyerins" type="submit">Valider!</button>
+        {{ form_end(form) }}
 
 
-    </form>
+    </div>
+
 {% endblock %}
