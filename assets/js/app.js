@@ -26,3 +26,12 @@ function scrollFunction(){
         document.getElementById("headernav").style.padding = "50px 0px";
     }
 }
+
+function myIcon(){
+    var x=document.getElementById("headernav");
+    if(x.classname == "myheadernav"){
+        x.classname+="responsive";
+    }else{
+        x.classname="myheadernav";
+    }
+}

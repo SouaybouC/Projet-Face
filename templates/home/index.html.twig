@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 
- {% block title %}Hello HomeController!{% endblock %}
-
+ {% block title %}Accueil{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/accueil') }}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
  {% block body %}
 

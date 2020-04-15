@@ -2,7 +2,10 @@
 {% block title %}
     Inscription !
 {% endblock %}
-
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('css/ins') }}
+    {% endblock %}
 
  {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
