@@ -25,23 +25,23 @@
                  <a href="{{ path('delete',{id : comments.id}) }}">Supprimer</a>
                  </div>
                  </span>
-                         <br>
-                         <br>
-                         {% else %}
-                             <p>Aucun commentaire soyez le premier a en rédigez un</p>
-                         {% endfor %}
+                 <br>
+                 <br>
+                 {% else %}
+                     <p>Aucun commentaire soyez le premier a en rédigez un</p>
+                 {% endfor %}
 
 
-                         <h2> Ajout d'un commentaire</h2>
+                 <h2> Ajout d'un commentaire</h2>
 
 
                  <div class="id">
                      <p>Dites nous ce que vous avez pensé de ce produit</p>
-                         {{ form_start(form,{'attr':{'class':'area'}}) }}
-                         {{ form_widget(form,{'attr':{'class':'area'}}) }}
-                            <br>
-                         <button class="envoyercom" type="submit">Valider</button>
-                         {{ form_end(form) }}
+                     {{ form_start(form,{'attr':{'class':'area'}}) }}
+                     {{ form_widget(form,{'attr':{'class':'area'}}) }}
+                     <br>
+                     <button class="envoyercom" type="submit">Valider</button>
+                     {{ form_end(form) }}
 
                  </div>
              </div>
