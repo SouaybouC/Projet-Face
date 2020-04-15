@@ -1,0 +1,110 @@
+.Produit-content h1,.Produit-content h2,.Produit-content h3{
+    color: white;
+}
+
+.Produit-content{
+    padding: 100px;
+    background-color: #adb7e7;
+}
+
+.Produit-content p{
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-style: normal;
+    font-size: 0.7em;
+    letter-spacing: .15em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    display: block;
+}
+
+.desc-prod{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.com-content{
+    width: 100%;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    background-color: #99a6e6;
+    opacity: 0.5;
+    border-radius: 5px;
+
+
+}
+
+.com-content a{
+    text-decoration: none;
+    white-space: normal;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    font-family: futura-pt;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+}
+
+.com-content a:hover{
+    color: #6f42c1;
+}
+
+
+.envoyercom:hover{
+    opacity: 0.5;
+}
+
+.envoyercom{
+    display: inline-block;
+    background-color:transparent;
+    border: solid;
+    border-color: white;
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-size: 12px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.id{
+    text-align: center;
+    resize: none;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-size: 12px;
+    letter-spacing: .2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+.area{
+    text-align: center;
+    width: 60%;
+    margin-left:20% ;
+    resize: none;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}

@@ -4,6 +4,11 @@
      Connexion
 {% endblock %}
 
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/app') }}
+        {{ encore_entry_link_tags('css/ins') }}
+    {% endblock %}
+
 {% block body %}
 
 <section class="body">
@@ -17,6 +22,7 @@
                              <label class="id" for="_username">Votre identifiant</label>
                              <input placeholder="adresse email" required name="_username" type="text" class="form-control"/>
                          </span>
+                    <br>
                     <span class="form-group">
                              <label class="mdp" for="_password">Votre mot de passe</label>
                              <input placeholder="Mot de passe" required name="_password" type="password" class="form-control"/>

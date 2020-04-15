@@ -1,22 +1,18 @@
 
-.body{
-    margin-top:11vw;
-    padding:15px 15px;
-}
-
-
 
 .Determinate-content label{
+
     text-align: center;
     display: inline-block;
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: .1em;
     line-height: 1em;
+    font-family: futura-pt;
 
 
 }
 
-.Determinate-content{
+.Determinate-content,.Skin-content{
     padding: 5px 5px 10px;
     display: block;
     word-wrap: break-word;
@@ -25,35 +21,43 @@
 }
 
 
-.Determinate{
+
+.Determinate,.Skin{
     text-align: center;
     height: 800px;
     min-height: 400px;
-    background-color: skyblue;
+    background-color: #adb7e7;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 150px 100px;
 }
+.Skin{
+    height: 400px;
+}
 
 
-
-.testdet p{
+.testdet label,.testdet p{
     white-space: normal;
-    color: black;
+    color: white;
     font-family: futura-pt;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: .2em;
     line-height: 2em;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
 }
 
+.testdet p{
+    font-size: 16px;
+}
+
+
 .envoyerdet{
     text-align: center;
     white-space: normal;
-    color: black;
+    color: white;
     font-family: futura-pt;
     font-size: 12px;
     letter-spacing: .2em;
@@ -62,7 +66,7 @@
     text-rendering: optimizeLegibility;
     background-color:transparent;
     border: solid;
-    border-color: black;
+    border-color: white;
     display: block;
     margin: 0 auto;
 
@@ -73,16 +77,33 @@
 }
 
 
-.Determinate-content h2{
+.Determinate-content h2,.Skin-content h2{
     text-align: center;
     white-space: normal;
-    color: black;
+    color: white;
     font-family: futura-pt;
     font-weight: 500;
     font-style: normal;
     letter-spacing: .22em;
     line-height: 1.5em;
     text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    display: block;
+}
+
+.Skin-content h2{
+    color: white;
+}
+
+.Skin-content .table{
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .15em;
+    line-height: 1.5em;
     text-rendering: optimizeLegibility;
     display: block;
 }

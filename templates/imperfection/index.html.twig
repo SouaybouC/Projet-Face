@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Imperfection index{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/app') }}
+        {{ encore_entry_link_tags('css/imperfection') }}
+    {% endblock %}
+    {% block javascripts %}
 
+    {% endblock %}
 
 {% block body %}
 
-    <div class="face">
+<div class="face">
     <H1 style="font-size:45px; text-align: center; margin-top: 5%;"> Signalez votre imperfection </H1>
 
     <p>Merci de bien vouloir selectionner la zone concerné</p>
@@ -24,7 +30,35 @@
     <img id="menton" name="menton" onclick="changeImage(id);this.name=name"
          src="{{ asset('images/facefinal_10.png') }}"> <br>
 
-    {#<a href="{{ path('questionnaire',{name : visage.name}) }}"> Suivant </a>#}
+
+    <div class="body">
+        <div class="Visage">
+            <div class="Visage-content">
+                <H2> Signalez votre imperfection </H2>
+                <h3>Merci de bien vouloir selectionner la zone concernée</h3>
+                <br>
+                <br>
+                <div class="imgface">
+                    <img id="front" name="front" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_4.png') }}"><br>
+                    <img id="yeux" name="yeux" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_5.png') }}"><br>
+                    <img id="jouegauche" name="joue" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_6.png') }}">
+                    <img id="nez" name="nez" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_7.png') }}">
+                    <img id="jouedroite" name="joue" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_8.png') }}"><br>
+                    <img id="bouche" name="bouche" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_9.png') }}"><br>
+                    <img id="menton" name="menton" onclick="changeImage(id);this.name=name"
+                         src="{{ asset('images/facefinal_10.png') }}"><br>
+
+                </div>
+                {#<a href="{{ path('questionnaire',{name : visage.name}) }}"> Suivant </a>#}
+            </div>
+        </div>
+    </div>
 
     <script>
 
@@ -41,7 +75,11 @@
                 image.src = "{{ asset('imagesrouge') }}" + s;
             }
         }
-
     </script>
 
-{% endblock body %}
+
+    {% endblock body %}
+    =======
+
+    {% endblock body %}
+

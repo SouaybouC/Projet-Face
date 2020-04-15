@@ -1,24 +1,35 @@
 {% extends 'base.html.twig' %}
 
  {% block title %}SkinType{% endblock %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('css/app') }}
+    {{ encore_entry_link_tags('css/determinate') }}
+{% endblock %}
+
 
  {% block body %}
-     <h1>SUPER {{ app.user.username }}</h1>
 
-     <table class="table">
-         <tbody>
-         <tr>Grace à vos reponses nous avons trouvez votre type de peau :
-         </tr>
-         <tr>
-             Vous avez une peau <b>{{ skinType.Label }}</b>
-             <br>
-         </tr>
-         Voici une petite description de celle-ci :
-         <tr>
-             <td>{{ skinType.Description }}</td>
-         </tr>
-         </tbody>
-     </table>
+     <div class="body">
+         <div class="Skin">
+             <div class="Skin-content">
+
+                 <h2>{{ skinType.Label }}</h2>
+
+                 <h3>HEY SUPER {{ app.user.username }} ! </h3>
+
+                 <div class="table">
+                     <p>Grace à vos réponses nous avons trouvez votre type de peau ! :</p>
+                     <p>Vous avez une peau <b>{{ skinType.Label }}</b></p>
+                     <br>
+                     <p>Voici une petite description de celle-ci :</p>
+                     <p>{{ skinType.Description }}</p>
+                 </div>
+             </div>
+         </div>
+
+
+     </div>
+
 
 
  {% endblock %}

@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
+    {{ encore_entry_link_tags('css/app') }}
     {{ encore_entry_link_tags('css/determinate') }}
 {% endblock %}
 {% block title %}
@@ -64,6 +65,6 @@
 
         <div>
         </div>
-
-
+    </div>
+</div>
         {% endblock %}

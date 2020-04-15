@@ -26,95 +26,7 @@
 
 
 
-
-.Avis{
-    padding: 100px 10px;
-    height: 300px;
-    min-height: 200px;
-    position: relative;
-}
-
-.Avis-content{
-
-    text-align: center;
-    box-sizing: border-box;
-    width: 100%;
-    display: inline-block;
-    min-height: 500px;
-    font-size: 10px;
-    padding: 5px;
-}
-.tem{
-    float: left;
-    width: 30%;
-    padding: 5px;
-}
-
-
-.Avis-content::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.Avis-content .tem img{
-    width: 70%;
-    height:auto;
-}
-
-
-.DemandeRens{
-    height: 400px;
-    min-height: 300px;
-    background-color: #1ea471;
-    /* background-image: url('paralax1.jpg'); */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 100px 100px;
-}
-
-
-.Accueil{
-    height:600px;
-    min-height: 400px;
-    background-color: #5eb5e0;
-    /* background-image: url('paralax.png'); */
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 150px 100px;
-}
-
-.Accueil-content,.DemandeRens-content{
-    padding: 5px 5px 10px;
-    width: 100%;
-    height: 100%;
-    display: block;
-    word-wrap: break-word;
-}
-
-.Avis h2{
-    color: black;
-}
-
-.acc-ins:hover{
-    opacity: 0.5;
-    color: white;
-}
-
-
-.acc-ins{
-    text-decoration: none;
-    margin-top: 100px;
-    border: solid;
-
-}
-
-h1,h2,h3,.acc-ins{
+h1,h2,h3 {
     text-align: center;
     white-space: normal;
     color: white;
@@ -127,49 +39,6 @@ h1,h2,h3,.acc-ins{
     text-rendering: optimizeLegibility;
     display: block;
 }
-
-.mail,.quest,.envoyer{
-    text-align: center;
-    white-space: normal;
-    color: white;
-    font-family: futura-pt;
-    font-size: 12px;
-    letter-spacing: .2em;
-    line-height: 2em;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
-}
-
-
-
-
-
-.envoyer {
-    display: inline-block;
-    background-color:transparent;
-    border: solid;
-    border-color: white;
-    text-align: center;
-}
-
-.envoyer:hover{
-    opacity: 0.5;
-}
-
-
-.contact-form{
-    padding: 5px;
-    text-align: center;
-}
-
-.questarea,.mailarea{
-    width: 90%;
-    resize: none;
-    height: 100%;
-}
-
-
-
 h1{
     font-size: 90px;
 }
@@ -179,9 +48,6 @@ h2{
 h3{
     font-size: 14px;
 }
-
-
-
 
 
 
@@ -197,7 +63,7 @@ h3{
     z-index: 99;
 }
 
-#headernav a,#footernav a {
+#headernav a,#footernav a{
     text-align: center;
     white-space: normal;
     float: left;
@@ -212,8 +78,22 @@ h3{
     letter-spacing: .22em;
     line-height: 1.5em;
 }
+.footernavtop a{
+    text-align: center;
+    display: inline-block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: futura-pt;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+}
 
-.headernavright{
+
+ .headernavright{
     float: right;
 }
 
@@ -232,18 +112,15 @@ h3{
 
 /* Links on mouse-over */
 #headernav a:hover,#footernav a:hover{
-    color: #ddd;
+    color: #6c757d;
 }
 
 #headernav a.active{
-    background-color: #76787b;
+    background-color: #adb7e7;
     width: 50%;
-    color: black;
+    color: white;
 }
 
-#headernav .icon{
-    display: none;
-}
 
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 700px) {
@@ -278,10 +155,10 @@ h3{
 }
 
 @media screen and (max-width: 700px){
-    .headernav.responsive,.headernavright.responsive{
+    #headernav.responsive,.headernavright.responsive{
         position: relative;
     }
-    .headernav.responsive a,.headernavright.responsive a{
+    #headernav.responsive a,.headernavright.responsive a{
         float: none;
         display: block;
         text-align: left;
@@ -309,6 +186,24 @@ h3{
 
 
 
+.envoyer {
+    display: inline-block;
+    background-color:transparent;
+    border: solid;
+    border-color: white;
+    text-align: center;
+}
+
+.envoyer:hover{
+    opacity: 0.5;
+}
+
+
+.contact-form{
+    padding: 5px;
+    text-align: center;
+}
+
 
 
 
@@ -324,7 +219,7 @@ h3{
 }
 
 .Inscription-content,.Connexion-content{
-    background-color: #5d5f61;
+    background-color: #adb7e7;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

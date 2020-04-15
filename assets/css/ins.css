@@ -6,8 +6,8 @@
     padding:50px;
 }
 
-.Inscription-content{
-    background-color: #ebebeb;
+.Inscription-content,.Connexion-content{
+    background-color: #adb7e7;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,3 +15,10 @@
     padding: 150px;
 
 }
+.area,.form-control{
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+

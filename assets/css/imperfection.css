@@ -1,0 +1,39 @@
+.Visage{
+    padding:25px;
+    text-align: center;
+}
+
+
+.Visage-content{
+    text-align: center;
+    padding: 100px;
+
+}
+.imgface{
+    margin: 0 auto;
+    text-align: center;
+    width: 250px;
+}
+
+.Visage-content img{
+    display:block;
+    float:left;
+}
+
+.Visage-content h1,.Visage-content h2,.Visage-content h3{
+    text-align: center;
+    white-space: normal;
+    color: black;
+    font-family: futura-pt;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    display: block;
+}
+
+
+
+

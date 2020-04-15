@@ -1,35 +1,52 @@
 {% extends 'base.html.twig' %}
  {% block title %}{{ produit.Name }}{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/app') }}
+        {{ encore_entry_link_tags('css/produit') }}
+    {% endblock %}
 
  {% block body %}
 
      <div class="body">
+         <div class="Produit">
+             <div class="Produit-content">
+                 <h1>{{ produit.Name }}</h1>
+                 <p class="desc-prod"> {{ produit.description }}</p>
 
-     <h1>{{ produit.Name }}</h1>
-     <p> {{ produit.description }}</p>
-
-     <h2> Commentaires </h2>
-
-
-     {% for comments in produit.CommentsRelation %}
-         <p> Titre : {{ comments.title }} </p>
-         <p> {{ comments.contains }} </p>
-         <a href="{{ path('comment_edit', {id : comments.id}) }}"> Modifier </a>
-         <a href="{{ path('delete',{id : comments.id}) }}">Supprimer<a>
-         <br>
-         <br>
-     {% else %}
-         <p>Aucun commentaire soyez le premier a en rédigez un</p>
-     {% endfor %}
+                 <h2> Commentaires </h2>
 
 
-     <h2> Ajout d'un commentaire</h2>
+                 <span class="test">{% for comments in produit.CommentsRelation %}
 
-     <p>Dites nous ce que vous avez pensé de ce produit</p>
+                 <div class="com-content">
+                 <h3> Titre : {{ comments.title }} </h3>
+                 <h3> Commentaire : {{ comments.contains }} </h3>
+                 <a href="{{ path('comment_edit', {id : comments.id}) }}"> Modifier </a>
+                 <a href="{{ path('delete',{id : comments.id}) }}">Supprimer</a>
+                 </div>
+                 </span>
+                         <br>
+                         <br>
+                         {% else %}
+                             <p>Aucun commentaire soyez le premier a en rédigez un</p>
+                         {% endfor %}
 
-     {{ form_start(form) }}
-     {{ form_widget(form) }}
-     <button type="submit">Valider</button>
-     {{ form_end(form) }}
+
+                         <h2> Ajout d'un commentaire</h2>
+
+
+                 <div class="id">
+                     <p>Dites nous ce que vous avez pensé de ce produit</p>
+                         {{ form_start(form,{'attr':{'class':'area'}}) }}
+                         {{ form_widget(form,{'attr':{'class':'area'}}) }}
+                            <br>
+                         <button class="envoyercom" type="submit">Valider</button>
+                         {{ form_end(form) }}
+
+                 </div>
+             </div>
+         </div>
+
+
      </div>
  {% endblock %}

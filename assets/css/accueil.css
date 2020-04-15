@@ -1,0 +1,101 @@
+.Avis{
+    padding: 100px 10px;
+    height: 300px;
+    min-height: 200px;
+    position: relative;
+}
+
+.Avis-content{
+
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    min-height: 500px;
+    font-size: 10px;
+    padding: 5px;
+}
+.tem{
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+
+.Avis-content::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.Avis-content .tem img{
+    width: 70%;
+    height:auto;
+}
+
+
+.DemandeRens{
+    height: 400px;
+    min-height: 300px;
+    background-color: #1ea471;
+    /* background-image: url('paralax1.jpg'); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 100px;
+}
+
+
+.Accueil{
+    height:600px;
+    min-height: 400px;
+    background-color: #adb7e7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 100px;
+}
+
+.Accueil-content,.DemandeRens-content{
+    padding: 5px 5px 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    word-wrap: break-word;
+}
+
+.Avis h2{
+    color: black;
+}
+
+.acc-ins:hover{
+    opacity: 0.5;
+    color: white;
+}
+
+
+.acc-ins{
+    text-decoration: none;
+    margin-top: 100px;
+    border: solid;
+
+}
+
+.acc-ins,.Accueil-content h1,.Accueil-content h2,.Accueil-content h3{
+    text-align: center;
+    white-space: normal;
+    color: white;
+    font-family: futura-pt;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .22em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    display: block;
+}
+
+
+
